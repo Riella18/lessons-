@@ -19,4 +19,10 @@ while ($m < 9) {
     echo $m . "\n";
     $m ++;
 }
-?>
+
+$x = "Mirela";
+if ($x = "Mirela") {
+    echo "U find my name";
+} else {
+    echo "Try another name";
+}
