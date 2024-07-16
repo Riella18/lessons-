@@ -13,3 +13,10 @@ while ($i <= 6) {
     $i ++ ;
 }
 
+$m = 5;
+while ($m < 9) {
+    if ($m == 8) break;
+    echo $m . "\n";
+    $m ++;
+}
+?>
