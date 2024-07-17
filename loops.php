@@ -22,7 +22,14 @@ while ($m < 9) {
 
 $x = "Mirela";
 if ($x = "Mirela") {
-    echo "U find my name";
+    echo "U find my name" . "\n";
 } else {
     echo "Try another name";
+}
+
+$y = "linux";
+if ($y = "linux") {
+    echo "Correct" . "\n";
+} else{
+    echo "Wrong";
 }
