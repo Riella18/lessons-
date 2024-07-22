@@ -1,7 +1,6 @@
 <?php
 
 require 'loops.php';
-<?php
 
 $arr = [1,2,3];
 
