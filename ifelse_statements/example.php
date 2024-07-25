@@ -25,3 +25,26 @@ if ($a> 10) {
         echo "but not above 20 \n";
     }
 }
+
+$temperature = (float)readline("Enter the temperature in C: ");
+
+if ($temperature<=0 ){
+    echo "It's freezing! Wear warm clothes. \n";
+}elseif ($temperature<=0 && $temperature>=10 ){
+    echo "It's cold. Make sure to wear a jacket.\n";
+}elseif ($temperature<=11 && $temperature>=20){
+    echo "It's cool. A sweater should be enough\n";
+}else{
+    echo "It's warm. wear light clothing\n "; 
+}
+
+$age = (float)readline("What's your age: ");
+if ($age<13){
+    echo "You are a child \n";
+} elseif($age<=13 && $age <20){
+    echo "You are a teenager \n";
+}elseif ($age<20 && $age <60){
+    echo "You are an adult ";
+}else{
+    echo "You are a Senior ";
+}

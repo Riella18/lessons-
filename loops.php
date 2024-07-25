@@ -1,6 +1,6 @@
 <?php
 
-$arr = [1,2, 3, 4];
+$arr = [1,2,3];
 
 foreach($arr as $a) {
     echo $a ."\n";
@@ -21,14 +21,14 @@ while ($m < 9) {
 }
 
 $x = "Mirela";
-if ($x = "Mirela") {
-    echo "U find my name" . "\n";
+if ($x == "Mirela") {
+    echo "U found my name" . "\n";
 } else {
     echo "Try another name";
 }
 
 $y = "linux";
-if ($y = "linux") {
+if ($y == "linux") {
     echo "Correct" . "\n";
 } else{
     echo "Wrong";
