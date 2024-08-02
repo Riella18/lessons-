@@ -255,3 +255,28 @@ foreach ($arr as &$value) {
 }
 // $arr is now array(2, 4, 6, 8)
 unset($value);
+
+
+$dinner = array("Meat", "Potatoes", "Beans", "Rice");
+sort($dinner);
+foreach($dinner as $ingredient){
+    echo "I love $ingredient \n";
+}
+
+echo "Current PHP version: " . phpversion();
+echo phpversion('tidy'). "\n";
+
+
+for ($i = 1; $i<7; $i ++){
+    for ($j= 1; $j <7; $j ++){
+
+    }
+}
+
+$a =10;
+$b = 20;
+
+$result = ($a > $b) ? $a : $b;
+echo "TEST1 : Value of result is $result \n";
+$result = ($a < $b) ? $a : $b;
+echo "TEST2 : Value of result is $result \n"; 

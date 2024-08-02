@@ -2,7 +2,7 @@
 
 trait Display {
     public function display(){
-        echo "Universitei: ". $this->s_name . ",Techer: {$this->fullname}\n";
+        echo "University: ". $this->s_name . ",Teacher: {$this->fullname}\n";
     }
 }
 
