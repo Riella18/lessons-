@@ -58,23 +58,69 @@ array_walk_recursive($j1, "w3rfunction");
 
 //exercise num 7
 $original_array = array(1, 2, 3, 4, 5);
-echo "Original Array : $original_array"." \n ";
-foreach($original_array as $o){
-    echo $o ; 
+
+// Display the original array
+echo "Original Array: ";
+foreach ($original_array as $o) {
+    echo "$o "; 
 }
-// Define a string '$' to be inserted into the array
+echo "\n";
 $inserted = '$';
 
 // Use array_splice() to insert the value '$' at index 3 in the original array
 array_splice($original_array, 3, 0, $inserted);
 
 // Output a message indicating the array after the insertion
-echo " \n After inserting '$' the array is : " . "\n";
+echo "After inserting '$' the array is: \n";
 
 // Iterate through the modified array and echo its elements
 foreach ($original_array as $o) {
     echo "$o ";
 }
-
-// Output a newline character for better formatting
 echo "\n";
+
+// exericse number 8
+function display($array, $sortfunc, $explanation){
+    $sortfunc($array);
+    echo $explanation . "\n"; 
+    foreach($array as $key => $values){
+        echo "Key = " .$key . ", Age = $values" . " \n";
+    }
+}
+$infos = array("Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40");
+display($infos, 'sort', "asceending order sort by value \n");
+display($infos, "ksort", "Ascending order sort by key \n"); 
+display($infos, "arsort", "Descending order sorting by value \n");
+display($infos, "krsort", "Descending order sorting by value \n"); 
+
+// exercise num 9 
+
+$month_temp = "78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 81, 76, 73,
+68, 72, 73, 75, 65, 74, 63, 67, 65, 64, 68, 73, 75, 79, 73";
+$temp_array = explode(',', $month_temp); // Split the string into an array using commas as the delimiter
+$tot_temp = 0;// Initialize variables for total temperature and the length of the temperature array
+$temp_array_length = count($temp_array);
+
+// Iterate through the temperature array, calculate the total temperature
+foreach($temp_array as $temp)
+{
+ $tot_temp += $temp;
+}
+
+$avg_high_temp = $tot_temp / $temp_array_length; // Calculate the average high temperature
+echo "Average Temperature is : \n" . $avg_high_temp . "\n"; // Display the average temperature
+sort($temp_array); // Sort the temperature array in ascending order
+
+echo " List of five lowest temperatures : \n";
+for ($i = 0; $i < 5; $i++)
+{ 
+    echo $temp_array[$i] . ", ";
+}
+echo "\n List of five highest temperatures : \n";
+for ($i = ($temp_array_length - 5); $i < $temp_array_length; $i++)
+{
+    echo $temp_array[$i] . ", ";
+}
+echo "\n";
+
+// exercise num 10

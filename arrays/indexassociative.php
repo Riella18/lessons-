@@ -43,7 +43,3 @@ foreach($car as $x => $y){
     echo "$x: $y \n";
 }
 
-$water = array("SantAnna", "Lajthiza", "Qafshtama");
-$water[2] = "stella";
-//echo $water ."\n";
-print_r($water);
