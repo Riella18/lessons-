@@ -9,6 +9,23 @@ echo "Audi pushed: \n";  //displays information about a variable in a way that's
 print_r($cars);
 
 
-$size=array("Big","Medium","Short" . "\n");  
+$size=array("Big","Medium","Short");  
+
+echo json_encode($size,true); die();
+
+$t = (object) [
+    'pipo'=>'OLE'
+];
+
+print_r($t->pipo);
+
+$size = (object) $size;
+
+print_r($size->{1});
+
+die();
+
 echo "Size: $size[0], $size[1] and $size[2] ".  "\n";  
+
+
 
