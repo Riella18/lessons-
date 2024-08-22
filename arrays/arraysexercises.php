@@ -387,3 +387,45 @@ class Prefix {
 $prefix = new Prefix();
 $strs = ["flower","flow","flight"];
 echo "$strs ";
+
+
+function arraySortPriority(array &$array, $offset, array $priorities)
+{
+    uasort($array, function ($a, $b) use ($offset, $priorities) {
+        if (!isset($a[$offset])) {
+            $a[$offset] = null;
+        }
+        if (!isset($b[$offset])) {
+            $b[$offset] = null;
+        }
+        if ($a[$offset] == $b[$offset]) {
+            return 0;
+        }
+        $aPriority = isset($priorities[$a[$offset]])
+            ? $priorities[$a[$offset]]
+            : null;
+        $bPriority = isset($priorities[$b[$offset]])
+            ? $priorities[$b[$offset]]
+            : null;
+        return $aPriority > $bPriority ? -1 : 1;
+    });
+}
+
+$array[0] = 2;
+$array[1] = 1;
+$array[2] = 3;
+$array[3] = 4;
+$array[4] = 2;
+$array[5] = 1;
+$array[6] = 2;
+
+arraySortPriority($array, 'type', $priorities);
+// test output
+foreach ($array as $item) {
+    if (isset($item['type'])) {
+        echo "{$item['type']}\r\n";
+    } else {
+        $values = array_values($item);
+        echo reset($values) . PHP_EOL;
+    }
+}
