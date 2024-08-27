@@ -54,7 +54,7 @@
 //     echo "Welcome back, " . $_COOKIE["user"];
 // }
 
-// Accessing GET parameters
+// Simulate GET parameters
 
 $_GET['name'] = 'Mirela';
 $_GET['age'] = '25';

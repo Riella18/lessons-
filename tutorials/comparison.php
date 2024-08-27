@@ -92,7 +92,7 @@ $couponCode = "DiscountPls";
 </body>
 </html> -->
 
-<?php
+<!-- <?php
 //there are only two string operators 
 //concatenation operator . combines the right argument with the left one
 // concatenating assignment operator .= appends the value in the right with the value in the left  
@@ -121,4 +121,5 @@ $couponCode = "DiscountPls";
         ?>
     </div>
 </body>
-</html>
+</html> -->
+
